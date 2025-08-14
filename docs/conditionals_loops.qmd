@@ -4,4 +4,81 @@ format: html
 editor: visual
 ---
 
+```{r}
+#Task 1
+pm2_5 <- 151
+
+if (pm2_5 < 100) {
+print("Low to moderate risk")
+} else if  (pm2_5 >= 100 & pm2_5 < 150) {
+print("Unhealthy for sensitive groups")
+} else if (pm2_5 >= 150) {
+print("Health risk present")
+}
+
+```
+
+
+```{r}
+#Task 2
+species <- "Blue whale"
+
+if (stringr::str_detect(species, "whale")) {
+  print("You found a whale!")
+}
+
+```
+
+```{r}
+#Task 3
+base_burrito <- 6.50
+main_ingredient <- "chicken"
+
+if (main_ingredient == "veggie") {
+  base_burrito + 0
+} else if (main_ingredient == "chicken") {
+  base_burrito + 3.00
+} else if (main_ingredient == "steak") {
+  base_burrito + 3.25
+}
+
+```
+
+```{r}
+#Task 4
+fish <- c("goldfish" = 8, "tetras" = 10, "guppies" = 12, "mollies" = 23)
+total_fish<- sum(fish)
+
+for (i in names(fish)) {
+  print(fish[i]/total_fish )
+}
+```
+
+```{r}
+#Task 4
+for (i in seq_along(month.name)){
+  print(paste(month.name[i], "is month", i))
+}
+```
+
+```{r}
+toolik_biochem <- read.csv(here::here("data", "2011_Kling_Akchem.csv"), na = c(".", "NA")) |> janitor::clean_names()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
