@@ -1,0 +1,21 @@
+---
+title: "toolik chem"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(here)
+library(janitor)
+
+```
+
+```{r}
+toolik_biochem <- read.csv(here::here("data", "2011_Kling_Akchem.csv"), na = c(".", "NA")) |> janitor::clean_names()
+```
+
+```{r}
+inlet_biochem <- dplyr::select(toolik_biochem$site == "Toolik Inlet")
+```
+
